@@ -1,0 +1,46 @@
+<div id="main-container">
+    <div id="header">
+        <img src="../../assets/logo.png" alt="Logo">
+        <h1> TPO</h1>
+    </div>
+    <div id="body">
+
+      <div id="company" *ngFor = "let company of data">
+          <div id="company-name">
+              <img src="../../assets/logo/{{company.logo}}" alt="Google">
+              <h2> {{company.name}} </h2> 
+          </div>
+          
+          <div id="company-details" style="height: {company.height}">
+              <table>
+                  <tr>
+                    <td>Location </td>
+                    <td> {{company.location}} </td>
+                  </tr>
+                  <tr>
+                    <td>Salary</td>
+                    <td> {{company.salary}} </td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td> {{company.type}} </td>
+                  </tr>
+              </table>
+              <h5> Description </h5>
+              <p>
+                {{company.desc}}
+              </p>
+              <h5> HeadQuarters </h5>
+              <img src="../../assets/headquarters/{{company.hq}}" alt="">
+              <input type="button" value="Apply" id="present-alert" class="custom-button" (click)="openTab1()"/>
+              <ion-alert
+  trigger="present-alert"
+  header="CONGRATULATIONS"
+  subHeader="all the best!"
+  message="Registered succesfully."
+></ion-alert>
+          </div>
+      </div>
+
+    </div>
+</div>

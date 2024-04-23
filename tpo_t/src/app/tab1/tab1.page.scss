@@ -1,0 +1,116 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin alignment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin leftAlignment{
+    display: flex;
+    align-items: center;
+}
+
+.custom-button{
+    background-color: #75bde7; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#main-container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+
+    #header{
+        width: 100%;        
+        height: 10%;
+        border: 1px solid white;
+        @include alignment();
+        img{
+            height: 100%;
+        }
+        h1{
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+
+    #body{
+        width: 100%;
+        height: 90%;
+        gap: 30px;
+        flex-wrap: wrap;
+        overflow: scroll;
+        padding: 20px 0px;
+        @include alignment();
+        border: 1px solid white;
+
+        #company{
+            width: 85%;
+            overflow: hidden;
+            border: 1px solid white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            #company-name{
+                width: 100%;
+                height: 40px;
+                color: black;
+                padding: 0px 15px;
+                @include leftAlignment();
+                background-color: white;
+
+                h2{
+                    margin: 0px 5px;
+                    padding: 0px;
+                }
+
+                img{
+                    height: 80%;
+                }
+
+            }
+
+            #company-details{
+                width: 100%;
+                // height: 0px;
+                overflow: hidden;
+                @include alignment();
+                flex-wrap: wrap;
+                table{
+                    width: 85%;
+                   
+                }
+                td{
+                    height: 30px;
+                    padding: 0px 5px;
+                }
+                h5{
+                    margin: 25px 0px 0px 0px;
+                }
+                p{
+                    width: 85%;
+                }
+                img{
+                    width: 80%;
+                    height: 150px;
+                    margin: 5px 0px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                    
+                }
+            }
+
+        }
+
+    }
+}

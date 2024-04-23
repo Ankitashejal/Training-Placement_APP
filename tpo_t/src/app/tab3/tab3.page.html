@@ -1,0 +1,159 @@
+ <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center">
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  
+  <ion-content [fullscreen]="true">
+    <ion-img src="../assets/profile.jpg " alt="Profile Picture" class="ion-padding"></ion-img>
+    <h1> {{data.name}} </h1>
+
+    <div id="detail">
+      <div class="grp">
+        <ion-icon name="at-outline"></ion-icon>
+        <p> {{data.email}} </p>
+      </div>
+      <div class="grp">
+        <ion-icon name="call-outline"></ion-icon>
+        <p> {{data.contact}} </p>
+      </div>
+      <div class="grp">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <p>Roll No: {{data.rollNo}}</p>
+      </div>
+      <div class="grp">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <p> Resume: {{data.resumeName}}</p>
+      </div>
+    </div>
+
+    <div id="hscDetail">
+        <h3>HSC Details</h3>
+        <div class="grp">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <b>College:</b> {{data.hscCollegeName}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <b>Year Of passing: </b> {{data.hscyearOfpassing}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="bookmarks-outline"></ion-icon>
+          <b>Total: </b> {{data.hscTotal}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="bookmark-outline"></ion-icon>
+          <b>Out of: </b> {{data.hscOutOf}}
+        </div>
+    </div>
+
+    <div id="sscDetail">
+      <h3>SSC Details</h3>
+      <div class="grp">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <b>College:</b> {{data.sscCollegeName}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <b>Year Of passing: </b> {{data.sscyearOfpassing}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <b>Total: </b> {{data.sscTotal}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="bookmark-outline"></ion-icon>
+        <b>Out of: </b> {{data.sscOutOf}}
+      </div>
+  </div>
+</ion-content> 
+<!-- 
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center">
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <h1> {{data.name}} </h1>
+
+    <div id="detail">
+      <div class="grp">
+        <ion-icon name="at-outline"></ion-icon>
+        <p> {{data.email}} </p>
+      </div>
+      <div class="grp">
+        <ion-icon name="call-outline"></ion-icon>
+        <p> {{data.contact}} </p>
+      </div>
+      <div class="grp">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <p>Roll No: {{data.rollNo}}</p>
+      </div>
+      <div class="grp">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <p> Resume: {{data.resumeName}}</p>
+      </div>
+    </div>
+
+    <div id="hscDetail">
+        <h3>HSC Details</h3>
+        <div class="grp">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <b>College:</b> {{data.hscCollegeName}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <b>Year Of passing: </b> {{data.hscyearOfpassing}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="bookmarks-outline"></ion-icon>
+          <b>Total: </b> {{data.hscTotal}}
+        </div>
+
+        <div class="grp">
+          <ion-icon name="bookmark-outline"></ion-icon>
+          <b>Out of: </b> {{data.hscOutOf}}
+        </div>
+    </div>
+
+    <div id="sscDetail">
+      <h3>SSC Details</h3>
+      <div class="grp">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <b>College:</b> {{data.sscCollegeName}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <b>Year Of passing: </b> {{data.sscyearOfpassing}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <b>Total: </b> {{data.sscTotal}}
+      </div>
+
+      <div class="grp">
+        <ion-icon name="bookmark-outline"></ion-icon>
+        <b>Out of: </b> {{data.sscOutOf}}
+      </div>
+  </div>
+
+ Show Resume Button 
+  <ion-button expand="block" (click)="showResume()">Show Resume</ion-button>
+</ion-content> -->

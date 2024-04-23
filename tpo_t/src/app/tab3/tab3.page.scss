@@ -1,0 +1,38 @@
+h1{
+    color: white;
+    text-align: center;
+}
+
+p{
+    padding-left: 5px;
+}
+
+.grp{
+    display: flex;
+    align-items: center;
+    p{
+        line-height: 25px;
+    }
+}
+
+ion-icon{
+    margin: 0px 10px;
+}
+
+#hscDetail, #sscDetail{
+    width: 80%;
+    color: black;
+    margin: 15px auto;
+    line-height: 25px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgb(226, 226, 226);
+    
+    h3{
+        margin: 10px 10px;
+    }
+}
+
+#sscDetail{
+
+}

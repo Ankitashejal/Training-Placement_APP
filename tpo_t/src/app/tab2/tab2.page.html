@@ -1,0 +1,93 @@
+<div id="main-container">
+    <div id="header">
+        <h1>Registration Form</h1>
+    </div>
+    <div id="body">
+      <div class="inputsection">
+        <label for="name" >Name: </label>
+        <input type="text" #name id="name">
+      </div>
+
+      <div class="inputsection">
+        <label for="email" > Email: </label>
+        <input type="email" #email id="email">
+      </div>
+
+      <div class="inputsection">
+        <label for="contact" >Contact: </label>
+        <input type="text" #contact id="contact">
+      </div>
+
+        <div class="inputsection">
+          <label for="rollno">ROll No;</label>
+          <input type="text" #rollno id="rollno">
+        </div>
+
+        <div class="education">
+            <h2> HSC </h2>
+            <div class="inputsection">
+              <label for="hscCOllege">College:</label>
+              <input #hsccollege type="text" id="hscCOllege">
+            </div>
+
+            <div class="inputsection">
+              <label for="yearofPasshsc">Year of passing:</label>
+              <input #hscyear type="text" id="yearofPasshsc">
+            </div>
+
+            <div class="inputsection">
+              <label for="totalhsc" (onChange)="saveTotal()">Total</label>
+              <input #hsctotal type="text" id="totalhsc">
+            </div>
+
+            <div class="inputsection">
+              <label for="hscoutof">Out of </label>
+              <input #hscmarks type="text" id="hscoutof">
+            </div>
+            
+        </div>
+
+      <div class="education">
+          <h2> SSC </h2>
+          <div class="inputsection">
+            <label for="rollno">College:</label>
+            <input #ssccollege type="text" id="rollno">
+          </div>
+
+          <div class="inputsection">
+            <label for="rollno">Year of passing:</label>
+            <input #sscyear type="text" id="rollno">
+          </div>
+
+          <div class="inputsection">
+            <label for="rollno">Total</label>
+            <input #ssctotal type="text" id="rollno">
+          </div>
+
+          <div class="inputsection">
+            <label for="rollno">Out of </label>
+            <input #sscmarks type="text" id="rollno">
+          </div>
+        </div>
+        <input style="display: none;" type="file" #fileInput>
+        
+        <button (click) ="openFile(fileInput)">
+            Upload Resume
+        </button>
+        
+
+        <div id="submit" style="margin-top: 15px;">
+          <ion-button id="sbumitButton" (click)="data.saveData(name.value, email.value, contact.value, rollno.value, hsccollege.value, hscyear.value, hsctotal.value, hscmarks.value, ssccollege.value, sscyear.value, ssctotal.value, sscmarks.value)">
+            Submit 
+          </ion-button>
+        </div>   
+
+        <ion-alert
+          trigger="sbumitButton"
+          header="Data saved scuuessfully!"
+          subHeader="Hey {{name.value}}"
+          message="Your data is saved to database successfully, check your profile for confirmation"
+          [buttons]="alertButtons"
+        ></ion-alert>
+    </div>
+</div>
